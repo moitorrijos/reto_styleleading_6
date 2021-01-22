@@ -1,0 +1,95 @@
+/*Global*/
+/* Propiedades Personalizadas */
+:root {
+    --main-background-color: #62306D;
+    --secondary-background-color: #F7EC7D;
+    --main-circle-color: #AA445F;
+    --secondary-line-color: #E38F66;
+}
+
+* > * {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--main-background-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.circulos {
+    width: 600px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(5, 100px);
+}
+
+.circulo {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    background-color: var(--secondary-line-color);
+    border-width: 24px;
+    border-style: solid;
+    border-color: var(--main-circle-color);
+    transform: translateY(-100px);
+    position: relative;
+    z-index: 2;
+}
+
+.circulo-2 {
+    background-color: var(--main-circle-color);
+    border-color: var(--secondary-line-color);
+}
+
+.circulo-1 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 6;
+}
+
+.circulo-2 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.circulo-3 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.rect {
+    background-color: var(--secondary-background-color);
+    position: relative;
+    z-index: 1;
+}
+
+.rect-1 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 6;
+}
+
+.rect-2 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 6;
+}
+
+.rect-3 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 6;
+}
